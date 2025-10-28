@@ -1,13 +1,11 @@
-<script setup>
-import useScore from '@/composables/useScore'
-
-// Destructure composable
-const { score } = useScore()
-</script>
-
+<!-- src/components/MainScore.vue -->
 <template>
-  <span class="font-bold text-white">
+  <div class="text-4xl font-bold text-center">
     MAIN SCORE: {{ score }}
-  </span>
+  </div>
 </template>
 
+<script setup>
+import { useScore } from '../composables/useScore'
+const { score } = useScore()
+</script>
